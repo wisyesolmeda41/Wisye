@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desa Lekloor — Kisar Selatan, Maluku Barat Daya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep:#0a2a3d; --deep2:#0f3f52; --teal:#1c6b74; --sand:#f6efe1;
+    --citrus:#e2a13a; --coral:#e2683f; --ink:#0a2a3d; --paper:#faf6ec;
+    --line: rgba(10,42,61,0.14); --maxw: 1120px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{ font-family:'Manrope', sans-serif; color:var(--ink); background:var(--paper); line-height:1.6; }
+  h1,h2,h3,h4{ font-family:'Fraunces', serif; font-weight:600; letter-spacing:-0.01em;}
+  a{color:inherit;} img{max-width:100%; display:block;}
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  .eyebrow{ font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--teal); font-weight:700; margin-bottom:10px; display:block;}
+  @media (prefers-reduced-motion: reduce){ *{animation:none !important; transition:none !important;} }
+
+  header.site{ position:sticky; top:0; z-index:50; background:rgba(250,246,236,0.9); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  nav{ display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:var(--maxw); margin:0 auto;}
+  .brand{ display:flex; align-items:center; gap:10px; font-family:'Fraunces', serif; font-weight:700; font-size:1.05rem;}
+  .brand .mark{ width:34px; height:34px; border-radius:50%; background:conic-gradient(from 210deg, var(--teal), var(--citrus), var(--coral), var(--teal)); display:flex; align-items:center; justify-content:center; color:#fff; font-size:0.8rem; font-weight:800;}
+  nav ul{ list-style:none; display:flex; gap:28px; font-size:0.88rem; font-weight:600;}
+  nav a{ text-decoration:none; padding:4px 2px; border-bottom:2px solid transparent; transition:border-color .2s;}
+  nav a:hover, nav a:focus-visible{ border-bottom-color:var(--coral); outline:none;}
+  .nav-toggle{ display:none; background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--ink);}
+
+  .hero{ position:relative; overflow:hidden; background:radial-gradient(120% 140% at 15% 0%, #123b50 0%, var(--deep) 55%, #071c29 100%); background-size:cover; background-position:center; color:var(--paper); padding:96px 0 64px; transition:background .3s;}
+  .hero .wrap{ position:relative; z-index:2; display:grid; grid-template-columns: 1.15fr 0.85fr; gap:48px; align-items:end;}
+  .hero-eyebrow{ color:var(--citrus); font-size:0.78rem; letter-spacing:0.2em; text-transform:uppercase; font-weight:700; margin-bottom:18px; display:block;}
+  .hero h1{ font-size:clamp(2.6rem, 5.6vw, 4.6rem); line-height:0.98; color:#fff; font-weight:600; font-style:italic;}
+  .hero h1 .sub{ color:var(--citrus); font-style:normal; display:block;}
+  .hero p.lede{ margin-top:22px; font-size:1.08rem; max-width:46ch; color:rgba(255,255,255,0.86);}
+  .hero-meta{ display:flex; gap:28px; margin-top:34px; flex-wrap:wrap;}
+  .hero-meta div{ border-left:2px solid var(--citrus); padding-left:12px;}
+  .hero-meta b{ display:block; font-family:'Fraunces',serif; font-size:1.5rem; color:#fff;}
+  .hero-meta span{ font-size:0.78rem; color:rgba(255,255,255,0.65); text-transform:uppercase; letter-spacing:.06em;}
+  .coast-card{ background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); border-radius:18px; padding:24px; backdrop-filter:blur(6px);}
+  .coast-card h3{ color:#fff; font-size:1.1rem; margin-bottom:10px; font-weight:600;}
+  .coast-card p{ color:rgba(255,255,255,0.82); font-size:0.92rem;}
+  .waves{ position:absolute; inset:auto 0 0 0; height:120px; z-index:1;}
+  .hero-photo-btn{ position:absolute; top:20px; right:28px; z-index:5; }
+
+  section{ padding:84px 0;}
+  section.alt{ background:#fff;}
+  .section-head{ max-width:640px; margin-bottom:48px;}
+  .section-head h2{ font-size:clamp(1.9rem,3.4vw,2.6rem); font-weight:600;}
+  .section-head p{ margin-top:12px; color:#43626e; font-size:1rem;}
+
+  .profil-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:56px; align-items:start;}
+  .profil-grid p{ margin-bottom:16px; color:#2c3e46;}
+  .stat-row{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:8px;}
+  .stat{ border:1px solid var(--line); border-radius:14px; padding:18px 20px; background:var(--sand);}
+  .stat b{ font-family:'Fraunces',serif; font-size:1.6rem; display:block; color:var(--teal);}
+  .stat span{ font-size:0.8rem; color:#5a6f76;}
+
+  .org-note{ font-size:0.85rem; color:#6d5427; background:#fbeed2; border:1px solid #edd394; padding:10px 16px; border-radius:10px; margin-bottom:36px; max-width:680px;}
+  .people-grid, .potensi-grid, .umkm-grid{ display:grid; gap:20px;}
+  .people-grid{ grid-template-columns:repeat(4,1fr);}
+  .potensi-grid{ grid-template-columns:repeat(3,1fr); gap:24px;}
+  .umkm-grid{ grid-template-columns:repeat(3,1fr); gap:24px;}
+
+  [data-card]{ position:relative; }
+  .person{ background:#fff; border:1px solid var(--line); border-radius:16px; padding:22px 18px; text-align:left; transition: transform .18s ease, box-shadow .18s ease;}
+  .person:hover{ transform:translateY(-4px); box-shadow:0 14px 28px -18px rgba(10,42,61,0.35);}
+  .photo-slot{ position:relative; background-size:cover; background-position:center; cursor:default;}
+  .photo-slot.avatar{ width:52px; height:52px; border-radius:50%; margin-bottom:14px; display:flex; align-items:center; justify-content:center; background-color:var(--teal); background-image:linear-gradient(135deg, var(--teal), var(--deep2));}
+  .placeholder-icon{ font-family:'Fraunces',serif; font-weight:700; color:#fff; font-size:1.1rem;}
+  .photo-slot.has-photo .placeholder-icon{ display:none;}
+  .person h4{ font-size:1rem; font-weight:600;}
+  .person .role{ font-size:0.78rem; color:var(--coral); font-weight:700; text-transform:uppercase; letter-spacing:.04em; margin-top:2px; display:block;}
+
+  .potensi-card{ background:linear-gradient(180deg, #fff, var(--sand)); border:1px solid var(--line); border-radius:18px; padding:28px 24px;}
+  .potensi-card .icon{ width:44px; height:44px; border-radius:12px; margin-bottom:16px; display:flex; align-items:center; justify-content:center; font-size:1.3rem;}
+  .potensi-card h3{ font-size:1.15rem; margin-bottom:8px;}
+  .potensi-card p{ font-size:0.92rem; color:#43626e;}
+  .tag-row{ display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}
+  .tag{ font-size:0.74rem; background:rgba(28,107,116,0.1); color:var(--teal); padding:4px 10px; border-radius:100px; font-weight:700;}
+
+  .umkm-card{ background:#fff; border:1px solid var(--line); border-radius:18px; overflow:hidden;}
+  .photo-slot.umkm-photo{ height:150px; display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-size:2rem; color:#fff; background-color:var(--teal); background-image:linear-gradient(135deg,#1c6b74,#0f3f52);}
+  .umkm-body{ padding:20px;}
+  .umkm-body h3{ font-size:1.05rem; margin-bottom:6px;}
+  .umkm-body p{ font-size:0.88rem; color:#43626e; margin-bottom:12px;}
+  .umkm-contact{ font-size:0.8rem; font-weight:700; color:var(--coral);}
+
+  .cta{ background:var(--deep); color:#fff; border-radius:24px; padding:56px 48px; display:grid; grid-template-columns:1.2fr 0.8fr; gap:32px; align-items:center;}
+  .cta h2{ color:#fff; font-size:2rem;}
+  .cta p{ color:rgba(255,255,255,0.75); margin-top:10px; max-width:44ch;}
+  .cta-info{ display:flex; flex-direction:column; gap:14px; font-size:0.92rem;}
+  .cta-info div{ display:flex; gap:10px; align-items:flex-start;}
+  .cta-info b{ color:var(--citrus); font-weight:700;}
+
+  footer{ padding:36px 0; text-align:center; font-size:0.82rem; color:#6d8189;}
+  footer .wrap{ border-top:1px solid var(--line); padding-top:24px;}
+
+  /* ===== EDIT MODE ===== */
+  .admin-only{ display:none; }
+  .add-card-btn{ border:2px dashed var(--teal); border-radius:16px; background:transparent; color:var(--teal); font-weight:700; cursor:pointer; min-height:100px; font-family:inherit; font-size:0.9rem;}
+  .del-btn{ position:absolute; top:8px; right:8px; width:24px; height:24px; border-radius:50%; border:none; background:var(--coral); color:#fff; font-size:0.85rem; line-height:1; cursor:pointer; z-index:3;}
+  .upload-hint{ position:absolute; inset:0; align-items:center; justify-content:center; background:rgba(10,42,61,0.55); color:#fff; font-size:0.7rem; font-weight:700; border-radius:inherit; cursor:pointer; text-align:center; padding:4px;}
+  body.edit-mode .admin-only{ display:flex; }
+  body.edit-mode .photo-slot{ cursor:pointer; }
+  body.edit-mode .editable{ outline:1px dashed var(--coral); outline-offset:3px; cursor:text; border-radius:3px;}
+  body.edit-mode .editable:focus{ outline:2px solid var(--teal); background:rgba(28,107,116,0.06);}
+
+  .admin-bar{ position:fixed; right:20px; bottom:20px; z-index:200; display:flex; flex-direction:column; align-items:flex-end; gap:10px;}
+  .admin-btn{ font-family:'Manrope',sans-serif; font-weight:700; font-size:0.85rem; border:none; border-radius:100px; padding:12px 20px; cursor:pointer; box-shadow:0 10px 24px -10px rgba(10,42,61,0.4);}
+  .admin-btn.lock{ background:var(--deep); color:#fff;}
+  .admin-btn.help{ background:#fff; color:var(--deep); border:1px solid var(--line);}
+  .admin-toolbar{ background:#fff; border:1px solid var(--line); border-radius:16px; padding:12px; display:flex; flex-direction:column; gap:8px; box-shadow:0 14px 30px -14px rgba(10,42,61,0.35); min-width:220px;}
+  .admin-toolbar button{ font-family:'Manrope',sans-serif; font-weight:700; font-size:0.8rem; border:none; border-radius:10px; padding:10px 12px; cursor:pointer; text-align:left;}
+  .admin-toolbar .save{ background:var(--citrus); color:#20140a;}
+  .admin-toolbar .quit{ background:var(--sand); color:var(--ink);}
+
+  .help-modal{ position:fixed; inset:0; background:rgba(10,42,61,0.55); z-index:300; display:none; align-items:center; justify-content:center; padding:20px;}
+  .help-modal.open{ display:flex;}
+  .help-box{ background:#fff; border-radius:18px; max-width:520px; width:100%; padding:32px; max-height:85vh; overflow-y:auto;}
+  .help-box h3{ font-size:1.3rem; margin-bottom:16px;}
+  .help-box ol{ padding-left:20px; display:flex; flex-direction:column; gap:10px; font-size:0.92rem; color:#2c3e46;}
+  .help-box .close-help{ margin-top:20px; background:var(--deep); color:#fff; border:none; border-radius:10px; padding:10px 18px; font-weight:700; cursor:pointer; width:100%;}
+
+  @media (max-width: 920px){
+    nav ul{ display:none; } .nav-toggle{ display:block; }
+    .hero .wrap{ grid-template-columns:1fr; }
+    .profil-grid{ grid-template-columns:1fr; }
+    .people-grid{ grid-template-columns:repeat(2,1fr); }
+    .potensi-grid, .umkm-grid{ grid-template-columns:1fr; }
+    .cta{ grid-template-columns:1fr; padding:36px 24px;}
+  }
+</style>
+</head>
+<body class="">
+
+<header class="site">
+  <nav>
+    <div class="brand"><span class="mark">LK</span> <span class="editable" data-field="brand">Desa Lekloor</span></div>
+    <ul>
+      <li><a href="#profil">Profil</a></li>
+      <li><a href="#perangkat">Perangkat Desa</a></li>
+      <li><a href="#potensi">Potensi Desa</a></li>
+      <li><a href="#umkm">UMKM</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Menu" onclick="toggleMobileNav()">☰</button>
+  </nav>
+</header>
+
+<section class="hero" id="heroSection">
+  <button class="admin-btn help admin-only hero-photo-btn" onclick="openPhotoUpload(document.getElementById('heroSection'), true)">📷 Ganti Foto Sampul</button>
+  <div class="wrap">
+    <div>
+      <span class="hero-eyebrow editable" data-field="eyebrow">Kecamatan Kisar Selatan · Kabupaten Maluku Barat Daya</span>
+      <h1><span class="editable" data-field="h1a">Desa Lekloor</span><span class="sub editable" data-field="h1b">Beranda di Pulau Kisar</span></h1>
+      <p class="lede editable" data-field="lede">Desa pesisir di ujung selatan Nusantara — bertumpu pada laut, kebun jeruk kisar, dan kehangatan warga Meher yang menjaga tradisi di antara Selat Wetar dan Laut Timor.</p>
+      <div class="hero-meta">
+        <div><b class="editable" data-field="m1b">Pulau Kisar</b><span class="editable" data-field="m1s">Wilayah Kepulauan</span></div>
+        <div><b class="editable" data-field="m2b">Provinsi Maluku</b><span class="editable" data-field="m2s">Kab. Maluku Barat Daya</span></div>
+        <div><b class="editable" data-field="m3b">Pesisir &amp; Kebun</b><span class="editable" data-field="m3s">Basis Ekonomi Desa</span></div>
+      </div>
+    </div>
+    <div class="coast-card">
+      <h3 class="editable" data-field="cardh">Tentang nama Lekloor</h3>
+      <p class="editable" data-field="cardp">Lekloor adalah salah satu dari enam desa asal di Pulau Kisar, bersama Wonreli, Abusur, Kota Lama, Oirata Barat, dan Oirata Timur — pulau kecil terluar Indonesia yang berbatasan langsung dengan Timor Leste di selatan.</p>
+    </div>
+  </div>
+  <svg class="waves" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,60 C150,110 350,10 600,60 C850,110 1050,10 1200,60 L1200,120 L0,120 Z" fill="#faf6ec"></path>
+  </svg>
+</section>
+
+<section id="profil">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Identitas Desa</span>
+      <h2 class="editable" data-field="profh">Profil Desa Lekloor</h2>
+      <p class="editable" data-field="profsub">Gambaran umum wilayah, letak geografis, dan kehidupan masyarakat Desa Lekloor.</p>
+    </div>
+    <div class="profil-grid">
+      <div>
+        <p class="editable" data-field="p1">Desa Lekloor terletak di Kecamatan Kisar Selatan, Kabupaten Maluku Barat Daya, Provinsi Maluku — bagian dari Pulau Kisar, salah satu pulau kecil terluar Indonesia yang berhadapan langsung dengan Selat Wetar di utara dan Laut Timor di selatan.</p>
+        <p class="editable" data-field="p2">Sebagian besar warga menggantungkan hidup pada sektor pertanian, perikanan, dan jasa. Kebun jeruk kisar (lemon manis) menjadi komoditas khas yang sejak lama dipasarkan hingga ke Ambon, Kupang, Makassar, hingga Surabaya, berdampingan dengan hasil laut dari perairan sekitar desa.</p>
+        <p class="editable" data-field="p3">Sebagai desa induk, Lekloor turut memekarkan Desa Persiapan Sumpali, mencerminkan pertumbuhan wilayah dan penataan pemerintahan desa yang terus berkembang.</p>
+      </div>
+      <div>
+        <div class="stat-row">
+          <div class="stat"><b class="editable" data-field="s1b">Pulau Kisar</b><span class="editable" data-field="s1s">Wilayah kepulauan terluar RI</span></div>
+          <div class="stat"><b class="editable" data-field="s2b">Meher</b><span class="editable" data-field="s2s">Bahasa daerah setempat</span></div>
+          <div class="stat"><b class="editable" data-field="s3b">Pesisir</b><span class="editable" data-field="s3s">Berbatasan langsung dengan laut</span></div>
+          <div class="stat"><b class="editable" data-field="s4b">Kisar Selatan</b><span class="editable" data-field="s4s">1 dari 6 desa induk di kecamatan</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="perangkat">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Struktur Pemerintahan</span>
+      <h2 class="editable" data-field="perh">Perangkat Desa</h2>
+      <p class="editable" data-field="persub">Jajaran penyelenggara pemerintahan Desa Lekloor.</p>
+    </div>
+    <div class="people-grid" id="peopleGrid">
+      <div class="person" data-card="">
+        <button class="del-btn admin-only" onclick="deleteCard(this)">×</button>
+        <div class="photo-slot avatar" onclick="openPhotoUpload(this)"><span class="placeholder-icon">PR</span><span class="upload-hint admin-only">📷</span></div>
+        <h4 class="editable" data-field="">P. Rehiara</h4>
+        <span class="role editable" data-field="">Kepala Desa</span>
+      </div>
+      <div class="person" data-card="">
+        <button class="del-btn admin-only" onclick="deleteCard(this)">×</button>
+        <div class="photo-slot avatar" onclick="openPhotoUpload(this)"><span class="placeholder-icon">FD</span><span class="upload-hint admin-only">📷</span></div>
+        <h4 class="editable" data-field="">F. Dadiara</h4>
+        <span class="role editable" data-field="">Sekretaris Desa</span>
+      </div>
+      <div class="person" data-card="">
+        <button class="del-btn admin-only" onclick="deleteCard(this)">×</button>
+        <div class="photo-slot avatar" onclick="openPhotoUpload(this)"><span class="placeholder-icon">AR</span><span class="upload-hint admin-only">📷</span></div>
+        <h4 class="editable" data-field="">A. Rehiara</h4>
+        <span class="role editable" data-field="">Ketua BPD</span>
+      </div>
+      <div class="person" data-card="">
+        <button class="del-btn admin-only" onclick="deleteCard(this)">×</button>
+        <div class="photo-slot avatar" onclick="openPhotoUpload(this)"><span class="placeholder-icon">KU</span><span class="upload-hint admin-only">📷</span></div>
+        <h4 class="editable" data-field=""><br></h4>
+        <span class="role editable" data-field="">Kaur Umum &amp; Keuangan</span>
+      </div>
+      <button class="add-card-btn admin-only" onclick="addPerson()">+ Tambah Perangkat</button>
+    </div>
+  </div>
+</section>
+
+<section id="potensi">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Sumber Daya Desa</span>
+      <h2 class="editable" data-field="poth">Potensi Desa Lekloor</h2>
+      <p class="editable" data-field="potsub">Sektor unggulan yang menopang perekonomian dan kehidupan warga.</p>
+    </div>
+    <div class="potensi-grid" id="potensiGrid">
+      <div class="potensi-card" data-card="">
+        <button class="del-btn admin-only" onclick="deleteCard(this)">×</button>
+        <div class="icon editable" data-field="" style="background:rgba(226,161,58,0.18); color:var(--citrus);">🍋</div>
+        <h3 class="editable" data-field="">Pertanian &amp; Perkebunan</h3>
+        <p class="editable" data-field="">Jeruk kisar (lemon manis) sebagai komoditas unggulan turun-temurun, bersama jagung dan hasil kebun lain yang dipasarkan lintas pulau.</p>
+        <div class="tag-row"><span class="tag editable" data-field="">Jeruk Kisar</span><span class="tag editable" data-field="">Jagung</span></div>
+      </div>
+      <div class="potensi-card" data-card="">
+        <button class="del-btn admin-only" onclick="deleteCard(this)">×</button>
+        <div class="icon editable" data-field="" style="background:rgba(28,107,116,0.15); color:var(--teal);">🐐</div>
+        <h3 class="editable" data-field="">Peternakan</h3>
+        <p class="editable" data-field="">Peternakan domba dan kambing menjadi sumber penghasilan tambahan warga, mendukung ketahanan pangan desa.</p>
+        <div class="tag-row"><span class="tag editable" data-field="">Domba</span><span class="tag editable" data-field="">Kambing</span></div>
+      </div>
+      <div class="potensi-card" data-card="">
+        <button class="del-btn admin-only" onclick="deleteCard(this)">×</button>
+        <div class="icon editable" data-field="" style="background:rgba(226,104,63,0.15); color:var(--coral);">🌊</div>
+        <h3 class="editable" data-field="">Pariwisata Bahari</h3>
+        <p class="editable" data-field="">Garis pantai Lekloor menawarkan wisata pantai, aktivitas wisata air, dan memancing — potensi destinasi bahari Pulau Kisar.</p>
+        <div class="tag-row"><span class="tag editable" data-field="">Wisata Pantai</span><span class="tag editable" data-field="">Memancing</span></div>
+      </div>
+      <div class="potensi-card" data-card="">
+        <button class="del-btn admin-only" onclick="deleteCard(this)">×</button>
+        <div class="icon editable" data-field="" style="background:rgba(28,107,116,0.15); color:var(--teal);">🎣</div>
+        <h3 class="editable" data-field="">Perikanan</h3>
+        <p class="editable" data-field="">Perairan sekitar desa menjadi sumber tangkapan ikan harian yang menopang konsumsi rumah tangga dan perdagangan lokal.</p>
+        <div class="tag-row"><span class="tag editable" data-field="">Tangkap Laut</span></div>
+      </div>
+      <div class="potensi-card" data-card="">
+        <button class="del-btn admin-only" onclick="deleteCard(this)">×</button>
+        <div class="icon editable" data-field="" style="background:rgba(226,161,58,0.18); color:var(--citrus);">🏺</div>
+        <h3 class="editable" data-field="">Budaya &amp; Kerajinan</h3>
+        <p class="editable" data-field="">Tradisi masyarakat Meher, termasuk sopi dan anggur khas Kisar, serta kerajinan tenun yang menjadi identitas budaya desa.</p>
+        <div class="tag-row"><span class="tag editable" data-field="">Sopi</span><span class="tag editable" data-field="">Tenun</span></div>
+      </div>
+      <div class="potensi-card" data-card="">
+        <button class="del-btn admin-only" onclick="deleteCard(this)">×</button>
+        <div class="icon editable" data-field="" style="background:rgba(226,104,63,0.15); color:var(--coral);">🏛️</div>
+        <h3 class="editable" data-field="">Koperasi Desa Merah Putih</h3>
+        <p class="editable" data-field="">Pembangunan Koperasi Merah Putih di Desa Lekloor menjadi penggerak baru ekonomi desa.</p>
+        <div class="tag-row"><span class="tag editable" data-field="">Ekonomi Desa</span></div>
+      </div>
+    </div>
+    <div style="margin-top:20px;"><button class="add-card-btn admin-only" style="width:100%;" onclick="addPotensi()">+ Tambah Potensi</button></div>
+  </div>
+</section>
+
+<section class="alt" id="umkm">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Ekonomi Warga</span>
+      <h2 class="editable" data-field="umkh">UMKM Desa Lekloor</h2>
+      <p class="editable" data-field="umksub">Usaha mikro, kecil, dan menengah milik warga desa.</p>
+    </div>
+    <div class="umkm-grid" id="umkmGrid">
+      <div class="umkm-card" data-card="">
+        <button class="del-btn admin-only" onclick="deleteCard(this)">×</button>
+        <div class="photo-slot umkm-photo" onclick="openPhotoUpload(this)" style="background-image:linear-gradient(135deg,#e2a13a,#c97a1e);"><span class="placeholder-icon">🍋</span><span class="upload-hint admin-only">📷 Ganti Foto</span></div>
+        <div class="umkm-body">
+          <h3 class="editable" data-field="">Sirup &amp; Manisan Jeruk Kisar</h3>
+          <p class="editable" data-field="">Olahan jeruk kisar segar menjadi sirup dan manisan, dijual untuk oleh-oleh khas pulau.</p>
+          <span class="umkm-contact editable" data-field="">Kelompok Tani Wanita Lekloor</span>
+        </div>
+      </div>
+      <div class="umkm-card" data-card="">
+        <button class="del-btn admin-only" onclick="deleteCard(this)">×</button>
+        <div class="photo-slot umkm-photo" onclick="openPhotoUpload(this)" style="background-image:linear-gradient(135deg,#1c6b74,#0f3f52);"><span class="placeholder-icon">🐟</span><span class="upload-hint admin-only">📷 Ganti Foto</span></div>
+        <div class="umkm-body">
+          <h3 class="editable" data-field="">Ikan Asap &amp; Ikan Kering</h3>
+          <p class="editable" data-field="">Hasil tangkapan nelayan lokal diolah menjadi ikan asap dan ikan kering.</p>
+          <span class="umkm-contact editable" data-field="">Kelompok Nelayan Pesisir Lekloor</span>
+        </div>
+      </div>
+      <div class="umkm-card" data-card="">
+        <button class="del-btn admin-only" onclick="deleteCard(this)">×</button>
+        <div class="photo-slot umkm-photo" onclick="openPhotoUpload(this)" style="background-image:linear-gradient(135deg,#e2683f,#b8471f);"><span class="placeholder-icon">🧵</span><span class="upload-hint admin-only">📷 Ganti Foto</span></div>
+        <div class="umkm-body">
+          <h3 class="editable" data-field="">Tenun Tradisional Kisar</h3>
+          <p class="editable" data-field="">Kain tenun dengan motif khas Pulau Kisar, ditenun manual oleh perajin perempuan desa.</p>
+          <span class="umkm-contact editable" data-field="">Sanggar Tenun Meher</span>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:20px;"><button class="add-card-btn admin-only" style="width:100%;" onclick="addUmkm()">+ Tambah UMKM</button></div>
+  </div>
+</section>
+
+<section id="kontak">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2 class="editable" data-field="ctah">Hubungi Kantor Desa Lekloor</h2>
+        <p class="editable" data-field="ctap">Untuk informasi layanan administrasi, potensi investasi desa, atau kerja sama UMKM, silakan hubungi kantor Desa Lekloor.</p>
+      </div>
+      <div class="cta-info">
+        <div><b>Lokasi</b> <span class="editable" data-field="loc">Balai Desa Lekloor, Kecamatan Kisar Selatan, Kabupaten Maluku Barat Daya, Provinsi Maluku</span></div>
+        <div><b>Akses</b> <span class="editable" data-field="akses">Bandara John J. Bakker, Pulau Kisar</span></div>
+        <div><b>Jam Layanan</b> <span class="editable" data-field="jam">Senin – Jumat, 08.00 – 15.00 WIT</span></div>
+        <div><b>Telepon/WA</b> <span class="editable" data-field="telp">0812-xxxx-xxxx</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap editable" data-field="footer">Pemerintah Desa Lekloor · Kecamatan Kisar Selatan · Kabupaten Maluku Barat Daya · Provinsi Maluku</div>
+</footer>
+
+<!-- ===== PANEL ADMIN (tidak tampil di versi hasil unduhan) ===== -->
+<div class="admin-bar">
+  <div class="admin-toolbar admin-only" id="toolbar">
+    <button onclick="exportSite()" class="save">💾 Simpan &amp; Unduh Website</button>
+    <button onclick="toggleEditMode()" class="quit">🔓 Keluar Mode Edit</button>
+  </div>
+  <button class="admin-btn lock" id="lockBtn" onclick="toggleEditMode()">🔒 Mode Edit</button>
+  <button class="admin-btn help" onclick="toggleHelp(true)">❓ Panduan</button>
+</div>
+
+<div class="help-modal" id="helpModal">
+  <div class="help-box">
+    <h3>Panduan Mengedit Website Desa</h3>
+    <ol>
+      <li>Klik tombol <b>🔒 Mode Edit</b>, lalu masukkan kata sandi admin (default: <b>lekloor2026</b>).</li>
+      <li>Klik langsung pada teks mana pun bergaris putus-putus untuk mengetik perubahan.</li>
+      <li>Klik ikon 📷 pada foto profil/UMKM/sampul untuk mengganti gambar dari komputer/HP.</li>
+      <li>Gunakan tombol <b>+ Tambah</b> di bawah setiap daftar untuk menambah kartu baru, dan tombol × merah untuk menghapus kartu.</li>
+      <li>Setelah selesai, klik <b>💾 Simpan &amp; Unduh Website</b>. File <code>index.html</code> baru akan terunduh ke perangkat Anda.</li>
+      <li>Unggah/upload file <code>index.html</code> tersebut ke hosting/pengelola situs desa, menggantikan file yang lama.</li>
+      <li>Untuk mengganti kata sandi, minta operator membuka file dengan editor teks dan mengubah nilai <code>ADMIN_PASSWORD</code> di bagian akhir kode.</li>
+    </ol>
+    <button class="close-help" onclick="toggleHelp(false)">Tutup Panduan</button>
+  </div>
+</div>
+
+<input type="file" id="photoInput" accept="image/*" style="display:none;">
+
+<!-- Template kosong untuk tombol "+ Tambah" -->
+<template id="tplPerson">
+  <div class="person" data-card="">
+    <button class="del-btn admin-only" onclick="deleteCard(this)">×</button>
+    <div class="photo-slot avatar" onclick="openPhotoUpload(this)"><span class="placeholder-icon">--</span><span class="upload-hint admin-only">📷</span></div>
+    <h4 class="editable" contenteditable="true">Nama Perangkat</h4>
+    <span class="role editable" contenteditable="true">Jabatan</span>
+  </div>
+</template>
+<template id="tplPotensi">
+  <div class="potensi-card" data-card="">
+    <button class="del-btn admin-only" onclick="deleteCard(this)">×</button>
+    <div class="icon editable" contenteditable="true" style="background:rgba(28,107,116,0.15); color:var(--teal);">✨</div>
+    <h3 class="editable" contenteditable="true">Judul Potensi</h3>
+    <p class="editable" contenteditable="true">Klik untuk menulis deskripsi potensi desa di sini.</p>
+    <div class="tag-row"><span class="tag editable" contenteditable="true">Tag</span></div>
+  </div>
+</template>
+<template id="tplUmkm">
+  <div class="umkm-card" data-card="">
+    <button class="del-btn admin-only" onclick="deleteCard(this)">×</button>
+    <div class="photo-slot umkm-photo" onclick="openPhotoUpload(this)" style="background-image:linear-gradient(135deg,#1c6b74,#0f3f52);"><span class="placeholder-icon">🏷️</span><span class="upload-hint admin-only">📷 Ganti Foto</span></div>
+    <div class="umkm-body">
+      <h3 class="editable" contenteditable="true">Nama Usaha</h3>
+      <p class="editable" contenteditable="true">Klik untuk menulis deskripsi UMKM di sini.</p>
+      <span class="umkm-contact editable" contenteditable="true">Nama Kelompok/Kontak</span>
+    </div>
+  </div>
+</template>
+
+<script>
+  // ====== GANTI KATA SANDI ADMIN DI SINI ======
+  const ADMIN_PASSWORD = "lekloor2026";
+  // =============================================
+
+  let editMode = false;
+  let unlocked = false;
+  let currentPhotoTarget = null;
+  let currentPhotoIsHero = false;
+
+  function toggleMobileNav(){
+    const menu = document.querySelector('nav ul');
+    const open = menu.style.display === 'flex';
+    if(open){ menu.style.display='none'; return; }
+    menu.style.cssText = 'display:flex; flex-direction:column; position:absolute; top:58px; right:28px; background:#faf6ec; border:1px solid var(--line); border-radius:12px; padding:16px 20px; box-shadow:0 12px 24px -12px rgba(10,42,61,0.3);';
+  }
+
+  function toggleEditMode(){
+    if(!editMode){
+      if(!unlocked){
+        const pw = prompt("Masukkan kata sandi admin untuk mulai mengedit:");
+        if(pw !== ADMIN_PASSWORD){
+          if(pw !== null) alert("Kata sandi salah.");
+          return;
+        }
+        unlocked = true;
+      }
+      editMode = true;
+      document.body.classList.add('edit-mode');
+      document.querySelectorAll('.editable').forEach(el => el.setAttribute('contenteditable','true'));
+      document.getElementById('lockBtn').textContent = '🔓 Sedang Mengedit';
+    } else {
+      editMode = false;
+      document.body.classList.remove('edit-mode');
+      document.querySelectorAll('.editable').forEach(el => el.removeAttribute('contenteditable'));
+      document.getElementById('lockBtn').textContent = '🔒 Mode Edit';
+    }
+  }
+
+  function toggleHelp(open){
+    document.getElementById('helpModal').classList.toggle('open', open);
+  }
+
+  function deleteCard(btn){
+    if(confirm("Hapus kartu ini?")){
+      btn.closest('[data-card]').remove();
+    }
+  }
+
+  function addPerson(){
+    const tpl = document.getElementById('tplPerson').content.cloneNode(true);
+    document.getElementById('peopleGrid').insertBefore(tpl, document.querySelector('#peopleGrid .add-card-btn'));
+  }
+  function addPotensi(){
+    const tpl = document.getElementById('tplPotensi').content.cloneNode(true);
+    document.getElementById('potensiGrid').appendChild(tpl);
+  }
+  function addUmkm(){
+    const tpl = document.getElementById('tplUmkm').content.cloneNode(true);
+    document.getElementById('umkmGrid').appendChild(tpl);
+  }
+
+  function openPhotoUpload(target, isHero){
+    if(!editMode) return;
+    currentPhotoTarget = target;
+    currentPhotoIsHero = !!isHero;
+    document.getElementById('photoInput').click();
+  }
+
+  document.getElementById('photoInput').addEventListener('change', function(e){
+    const file = e.target.files[0];
+    if(!file || !currentPhotoTarget) return;
+    const reader = new FileReader();
+    reader.onload = function(ev){
+      const dataUrl = ev.target.result;
+      if(currentPhotoIsHero){
+        currentPhotoTarget.style.backgroundImage = `linear-gradient(160deg, rgba(10,42,61,.82), rgba(7,28,41,.88)), url(${dataUrl})`;
+      } else {
+        currentPhotoTarget.style.backgroundImage = `url(${dataUrl})`;
+        currentPhotoTarget.classList.add('has-photo');
+      }
+    };
+    reader.readAsDataURL(file);
+    e.target.value = '';
+  });
+
+  function exportSite(){
+    const clone = document.documentElement.cloneNode(true);
+    clone.querySelector('body').classList.remove('edit-mode');
+    clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+    clone.querySelectorAll('.help-modal').forEach(el => el.classList.remove('open'));
+    clone.querySelectorAll('nav ul').forEach(el => el.removeAttribute('style'));
+    const html = '<!DOCTYPE html>\n' + clone.outerHTML;
+    const blob = new Blob([html], {type:'text/html'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'index.html';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+    alert("Website berhasil diunduh sebagai index.html. Unggah file ini ke hosting desa untuk menggantikan file lama.");
+  }
+</script>
+
+
+
+</body></html>
